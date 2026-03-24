@@ -1,0 +1,86 @@
+document.querySelectorAll('a[href^="#"]').forEach(link => {
+    link.addEventListener("click", e => {
+        const target = document.querySelector(link.getAttribute("href"));
+        if (!target) return;
+
+        e.preventDefault();
+        target.scrollIntoView({ behavior: "smooth", block: "start"});
+    });
+});
+
+
+const nav = document.querySelector(".main-nav");
+const header = document.querySelector(".site-header");
+
+function toggleNav() {
+    nav.classList.toggle("nav-open");
+    header.classList.toggle("nav-active");
+}
+
+const form = document.querySelector(".quote-form");
+
+if (form) {
+    form.addEventListener("submit", e => {
+        e.preventDefault();
+
+        const name = form.querySelector("#name");
+        const phone = form.querySelector("#phone");
+        const email = form.querySelector("#email");
+
+        let valid = true;
+
+        [name, phone, email].forEach(field => {
+            if (!field.value.trim()) {
+                field.classList.add("input-error");
+                valid = false;
+            } else {
+                field.classList.remove("input-error");
+            }
+        });
+
+        if (!valid) {
+            showFormMessage("Please fill out all required fields.", "error");
+            return;
+        }
+// simulate sucess since backend isnt connected yet
+        showFormMessage("Your request has been submitted! We'll contact you soon", "success");
+
+        form.reset();
+    });
+}
+
+function showFormMessage(message, type) {
+    let msgBox = document.querySelector(".form-message");
+
+    if (!msgBox) {
+        msgBox = document.createElement("div");
+        msgBox.className = "form-message";
+        form.prepend(msgBox);
+    }
+
+    msgBox.textContent = message;
+    msgBox.className = `form-message ${type}`;
+
+    setTimeout(() => {
+        msgBox.classList.add("fade-out");
+        setTimeout(() => msgBox.remove(), 500);
+    }, 3000);
+}
+
+const revealElements = document.querySelectorAll(
+    ".highlight-card, .specialty-card, .section-header, .footer-inner"
+);
+
+const observer = new IntersectionObserver(
+    entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("reveal");
+                observer.unobserve(entry.raget);
+            }
+        });
+    },
+    { threshold: 0.2 }
+);
+
+revealElements.forEach(el => observer.observe(el));
