@@ -20,6 +20,10 @@
     box-sizing: border-box;
 }
 
+.hero {
+    background: url("assets/scraper.jpeg") center/ cover no-repeat;
+}
+
 body {
     font-family: var(--font-main);
     color: var(--color-text);
