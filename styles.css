@@ -72,7 +72,7 @@ ul {
 
 
 .site-header {
-    background: var(--color-dark);
+    background: #000;
     color: var(--color-light);
     padding: 1rem 0;
     position: sticky;
@@ -87,14 +87,18 @@ ul {
 }
 
 .logo {
+    font-size: 2rem;
+    font-weight: 800;
+    color: white;
     display: flex;
     flex-direction: column;
     font-weight: bold;
 }
 
 .logo-primary {
-    font-size: 1.6rem;
-    color: var(--color-primary);
+    font-size: 2.2rem;
+    font-weight: 900;
+    color: white;
 }
 
 .logo-secondary {
@@ -108,7 +112,7 @@ ul {
 }
 
 .nav-link {
-    color: var(--color-light);
+    color: white;
     font-weight: 500;
 }
 
