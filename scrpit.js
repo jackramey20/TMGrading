@@ -71,6 +71,9 @@ const revealElements = document.querySelectorAll(
     ".highlight-card, .specialty-card, .section-header, .footer-inner"
 );
 
+const img = "assets/scraper.jpeg"; 
+
+
 const observer = new IntersectionObserver(
     entries => {
         entries.forEach(entry => {
