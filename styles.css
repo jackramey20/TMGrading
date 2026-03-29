@@ -15,6 +15,9 @@
     --font-main: 'Segoe UI', Arial, sans-serif;
 }
 
+h1, h2, h3 {
+    font-family: 'Oswald', sans-serif;
+
 * {
     margin: 0;
     padding: 0;
@@ -45,7 +48,7 @@ ul {
 
 .container {
     width: 90%;
-    max-width: var(--max-width);
+    max-width: 1100px;
     margin: 0 auto;
 }
 
@@ -120,7 +123,7 @@ ul {
 }
 
 .btn-primary:hover {
-    background: #c09015;
+    background: #e14d00;
 }
 
 .btn-secondary {
@@ -130,7 +133,8 @@ ul {
 
 .btn-outline:hover,
 .btn-secondary:hover {
-    background: #c09015;
+    background: #ff5a00;
+    color: white;
 }
 
 .hero {
@@ -183,63 +187,30 @@ ul {
     background: #e14d00;
 }
 
-.hero::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.55);
-}
-
 .hero-inner {
     position: relative;
     z-index: 2;
 }
 
-.hero-title {
-    font-size: 3rem;
-    font-weight: bold;
-    margin-bottom: 1rem;
-}
-
-.hero-subtitle {
-    font-size: 1.4rem;
-    margin-bottom: 1rem;
-}
-
-.hero-text {
-    max-width: 600px;
-    margin-bottom: 2rem;
-}
-
-.hero-actions {
-    display: flex;
-    gap: 1rem;
-}
-
-.hero-highlights {
-    margin-top: 3rem;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 1.5rem;
-}
-
-.highlight-card,
-.specialty-card {
-    background: var(--color-light);
-    color: var(--color-dark);
-    padding: 1.5rem;
-    border-radius: var(--radius);
-    box-shadow: var(--shadow);
-    text-align: center;
+.highlight-card:hover,
+.specialty-card:hover {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    text-aligh: center;
+    transition: 0.3s ease;
+    transform: translateY(-5px);
 }
 
 .section {
-    padding: 4rem 0;
+    padding: 6rem 0;
 }
 
 .section-header {
-    text-align: center;
-    margin-bottom: 2rem;
+    color: #777;
+    letter-spacing: 2px;
+    font-size: 0.9rem;
 }
 
 .section-header h2 {
@@ -249,8 +220,12 @@ ul {
 
 .specialties-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 2rem;
+}
+
+.section:nth-child(even) {
+    background: #f8f8f8;
 }
 
 .video-wrapper {
