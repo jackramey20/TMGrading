@@ -136,10 +136,11 @@ ul {
 .hero {
    position: relative;
     height: 100vh;
-    background: url("assets/scraper.jpeg") center/cover no-repeat;
+    background: url("assets/scraper.jpeg") center center/cover no-repeat;
     display: flex;
     align-items: center;
     justify-content: center;
+    image-rendering: -webkit-optimize-contrast;
 }
 
 .hero-overlay {
