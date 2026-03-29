@@ -96,9 +96,11 @@ ul {
     color: var(--color-primary);
 }
 
-.header-cta {
-    display: flex;
-    gap: 1rem;
+.header-cta .btn {
+    padding: 0.5rem 1rem;
+    font-size: 0.85rem;
+    border-radius: 4px;
+    line-height: 1.2;
 }
 
 .btn {
@@ -111,42 +113,38 @@ ul {
 }
 
 .btn-primary {
-    background: var(--color-primary);
-    color: var(--color-dark);
+    background: #ff5a00;
+    color: white;
+    border: none;
 }
 
 .btn-primary:hover {
     background: #c09015;
 }
 
-.btn-secondary,
-.btn-outline {
-    border: 2px solid var(--color-primary);
-    color: var(--color-primary);
+.btn-secondary {
+    border: 2px solid #ff5a00;
+    color: #ff5a00;
 }
 
 .btn-outline:hover,
 .btn-secondary:hover {
-    background: var(--color-primary);
-    color: var(--color-dark);
+    background: #c09015;
 }
 
 .hero {
-    width: 100%;
+   position: relative;
     height: 100vh;
-    background: url("assets/scraper.jpeg") center/cover no-repeat;
+    background: url("assets.scraper.jpeg") center/cover no-repeat;
     display: flex;
     align-items: center;
-    color: var(--color-light);
-    position: relative;
-    padding: 6rem 0;    /* Only keep if this padding is desired */
     justify-content: center;
 }
 
 .hero-overlay {
     position: absolute;
     inset: 0;
-    background: linear-gradient(to right, rgba(0,0,0,0.8), rgba(0,0,0,0.2));
+    background: rgba(0,0,0,0.55);
 }
 
 .hero-center {
