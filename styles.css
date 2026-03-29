@@ -63,12 +63,13 @@ ul {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 0 2rem;
 }
 
 .logo {
     font-size: 2rem;
     font-weight: bold;
-    display: flex;
+    display: none;
     flex-direction: column;
 }
 
