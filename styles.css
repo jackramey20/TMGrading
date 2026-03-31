@@ -185,11 +185,13 @@ ul {
     background-position: center;
     background-attachment: fixed;
     opacity: 0;
-    transition: opacity 1.5s ease-in-out;
+    transform: scale(1);
+    transition: opacity 1.5s ease-in-out, transform 6s ease;
 }
 
 .slide.active {
     opacity: 1;
+    transform: scale(1.05);
 }
 
 .hero-center {
