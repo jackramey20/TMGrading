@@ -69,22 +69,6 @@ ul {
     padding: 0 2rem;
 }
 
-.logo {
-    font-size: 2rem;
-    font-weight: bold;
-    display: none;
-    flex-direction: column;
-}
-
-.logo-primary {
-    font-size: 2.2rem;
-}
-
-.logo-secondary {
-    font-size: 1rem;
-    letter-spacing: 1px;
-}
-
 .logo-section {  /* For the logo image in specialties */
     position: relative;
     min-height: 100vh;
@@ -189,6 +173,7 @@ ul {
     inset: 0;
     background-size: cover;
     background-position: center;
+    background-repeat: no-repeat;
     opacity: 0;
     transform: scale(1);
     transition: opacity 1.2s ease-in-out, transform 6s ease;
@@ -196,7 +181,7 @@ ul {
 
 .slide.active {
     opacity: 1;
-    transform: scale(1);
+    transform: scale(1.1); /* originally 1 */
 }
 
 .hero-center {
@@ -233,29 +218,19 @@ ul {
     background: #e14d00;
 }
 
-.hero-inner {
-    position: relative;
-    z-index: 2;
-}
-
 .specialty-card {
     border: 2px solid rgba(255, 255, 255, 0.8);
+    padding: 2rem;
     background: transparent;
     backdrop-filter: blur(2px);/* glass effect */
     border-radius: 8px; 
     color: #111;
-    transition: 0.3s ease;
+    transition: 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
 } 
 
-.highlight-card:hover,
 .specialty-card:hover {
-    background: white;
-    border: 2px solid rgba(255, 255, 255, 0.7);
-    padding: 2rem;
-    border-radius: 8px;
+    background: #fff;
     box-shadow: 0 10px 25px rgba(0,0,0,0.08);
-    text-align: center;
-    transition: 0.3s ease;
     transform: translateY(-5px);
 }
 
