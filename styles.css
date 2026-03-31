@@ -238,7 +238,7 @@ ul {
     padding: 2rem;
     border-radius: 8px;
     box-shadow: 0 10px 25px rgba(0,0,0,0.08);
-    text-aligh: center;
+    text-align: center;
     transition: 0.3s ease;
     transform: translateY(-5px);
 }
