@@ -88,7 +88,7 @@ ul {
 .logo-section {  /* For the logo image in specialties */
     position: relative;
     min-height: 100vh;
-    background: url("assets.logo.png") center/contain no-repeat;
+    background: url("assets/logo.png") center/contain no-repeat;
     background-attachment: fixed;
     background-size: contain;
     display: flex;
@@ -180,9 +180,8 @@ ul {
 .slide {
     position: absolute;
     inset: 0;
-    background-size: contain;
+    background-size: cover;
     background-position: center;
-    background-attachment: fixed;
     opacity: 0;
     transform: scale(1);
     transition: opacity 1.5s ease-in-out, transform 6s ease;
