@@ -100,7 +100,7 @@ ul {
 .logo-overlay {
     position: absolute;
     inset: 0;
-    background: rgba(255, 255, 255, 0.85);
+    background: rgba(255, 255, 255, 0.0);
 }
 
 .main-nav .nav-list {
@@ -156,12 +156,19 @@ ul {
 }
 
 .hero {
-   position: relative;
+    position: relative;
     height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
     image-rendering: -webkit-optimize-contrast;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.section {
+    position: relative;
+    z-index: 2;
 }
 
 .hero-overlay {
@@ -172,7 +179,7 @@ ul {
 }
 
 .hero-slideshow {
-    position: absolute;
+    position: fixed;
     inset: 0;
     z-index: 0;
 }
@@ -231,9 +238,19 @@ ul {
     z-index: 2;
 }
 
+.specialty-card {
+    border: 2px solid rgba(255, 255, 255, 0.8);
+    background: transparent;
+    backdrop-filter: blur(2px);/* glass effect */
+    border-radius: 8px; 
+    color: #111;
+    transition: 0.3s ease;
+} 
+
 .highlight-card:hover,
 .specialty-card:hover {
     background: white;
+    border: 2px solid rgba(255, 255, 255, 0.7);
     padding: 2rem;
     border-radius: 8px;
     box-shadow: 0 10px 25px rgba(0,0,0,0.08);
