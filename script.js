@@ -90,7 +90,7 @@ const observer = new IntersectionObserver(
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add("reveal");
-                observer.unobserve(entry.raget);
+                observer.unobserve(entry.target);
             }
         });
     },
