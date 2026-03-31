@@ -218,6 +218,44 @@ ul {
     background: #e14d00;
 }
 
+/* GRID LAYOUT */
+/* .hero-highlights {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+    margin-top: 3rem;
+} */
+
+/* ICON STYLE */
+/* .highlight-icon {
+    font-size: 2.5rem;
+    color: #ff5a00;
+    margin-bottom: 1rem;
+    transition: transform 0.3s ease;
+} */
+
+.highlight-card {
+    padding: 2rem;
+    border: 2px solid rgba(255, 255, 255, 0.7);
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.08);
+    color: white;
+    backdrop-filter: blur(4px);
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.highlight-card:hover {
+    background: white;
+    color: #111;
+    transform: translate(-6px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.hightlight-card:hover .highlight-icon {
+    transform: scale(1.2);
+}
+
 .specialty-card {
     border: 2px solid rgba(255, 255, 255, 0.8);
     padding: 2rem;
