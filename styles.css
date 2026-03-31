@@ -86,6 +86,24 @@ ul {
     letter-spacing: 1px;
 }
 
+.logo-section {  /* For the logo image in specialties */
+    position: relative;
+    min-height: 100vh;
+    background: url("assets.logo.png") center/contain no-repeat;
+    background-attachment: fixed;
+    background-size: contain;
+    display: flex;
+    align-items: center;
+    padding: 6rem 0;
+    z-index: 2;
+}
+
+.logo-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(255, 255, 255, 0.85);
+}
+
 .main-nav .nav-list {
     display: flex;
     gap: 1.5rem;
@@ -224,7 +242,6 @@ ul {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     gap: 2rem;
-    background: url("assets/logo.png")center center/ cover no-repeat
 }
 
 .section:nth-child(even) {
@@ -338,5 +355,10 @@ ul {
 
     .quote-layout {
         grid-template-columns: 1fr;
+    }
+
+    .hero,
+    .logo-section {
+        background-attachment: scroll;
     }
 }
