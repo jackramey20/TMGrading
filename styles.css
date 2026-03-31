@@ -71,11 +71,11 @@ ul {
 
 .logo-section {  /* For the logo image in specialties */
     position: relative;
-    min-height: 100vh;
     background: url("assets/logo.png") center/contain no-repeat;
     background-attachment: fixed;
     background-size: contain;
     display: flex;
+    background-color: #000;
     align-items: center;
     padding: 6rem 0;
     z-index: 2;
@@ -151,8 +151,14 @@ ul {
 }
 
 .section {
-    position: relative;
-    z-index: 2;
+    #services,
+    #about,
+    #reviews,
+    #gallery,
+    #contact {
+        position: relative;
+        z-index: 2;
+        background: white;
 }
 
 .hero-overlay {
@@ -219,20 +225,20 @@ ul {
 }
 
 /* GRID LAYOUT */
-/* .hero-highlights {
+.hero-highlights {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 1.5rem;
     margin-top: 3rem;
-} */
+} 
 
 /* ICON STYLE */
-/* .highlight-icon {
+.highlight-icon {
     font-size: 2.5rem;
     color: #ff5a00;
     margin-bottom: 1rem;
     transition: transform 0.3s ease;
-} */
+}
 
 .highlight-card {
     padding: 2rem;
@@ -248,7 +254,7 @@ ul {
 .highlight-card:hover {
     background: white;
     color: #111;
-    transform: translate(-6px);
+    transform: translateY(-6px);
     box-shadow: 0 10px 25px rgba(0,0,0,0.2);
 }
 
