@@ -142,6 +142,7 @@ ul {
    position: relative;
     height: 100vh;
     background: url("assets/scraper.jpeg") center center/cover no-repeat;
+    background-attachment: fixed;
     display: flex;
     align-items: center;
     justify-content: center;
