@@ -181,7 +181,7 @@ ul {
 
 .slide.active {
     opacity: 1;
-    transform: scale(1.1); /* originally 1 */
+    transform: scale(1.02); /* originally 1 */
 }
 
 .hero-center {
