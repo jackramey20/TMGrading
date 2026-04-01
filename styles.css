@@ -150,16 +150,6 @@ ul {
     z-index: 1;
 }
 
-#services,
-#about,
-#reviews,
-#gallery,
-#contact {
-    position: relative;
-    z-index: 2;
-    background: white;
-}
-
 .hero-overlay {
     position: absolute;
     inset: 0;
@@ -257,7 +247,7 @@ ul {
     box-shadow: 0 10px 25px rgba(0,0,0,0.2);
 }
 
-.hightlight-card:hover .highlight-icon {
+.highlight-card:hover .highlight-icon {
     transform: scale(1.2);
 }
 
