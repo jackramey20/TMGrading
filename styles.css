@@ -171,12 +171,12 @@ ul {
     background-repeat: no-repeat;
     opacity: 0;
     transform: scale(1);
-    transition: opacity 1.2s ease-in-out, transform 6s ease;
+    transition: opacity 1.2s ease-in-out;
 }
 
 .slide.active {
     opacity: 1;
-    transform: scale(1.02); /* originally 1 */
+    transform: scale(1); /* originally 1 */
 }
 
 .hero-center {
@@ -348,12 +348,10 @@ ul {
     transform: translateY(0);
 }
 
-.hight-card,
 .section-header,
 .footer-inner {
     opacity: 0;
-    transform: translateY(30px);
-    transition: 0.6s ease;
+    transform: none;
 }
 
 .form-message {
