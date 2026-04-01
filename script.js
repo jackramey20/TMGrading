@@ -82,6 +82,16 @@ function showNextSlide() {
     slides[index].classList.add('active');
 }
 
+window.addEventListener("scroll", () => {
+    const header = document.querySelector(.site-header");
+
+    if (window.scrollY > 50) {
+        header.classList.add("scrolled");
+    } else {
+        header.classList.remove("scrolled");
+    }
+});
+
 setInterval(showNextSlide, 4000); // change every 4 seconds
 
 
