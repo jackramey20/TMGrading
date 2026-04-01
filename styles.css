@@ -150,15 +150,14 @@ ul {
     z-index: 1;
 }
 
-.section {
-    #services,
-    #about,
-    #reviews,
-    #gallery,
-    #contact {
-        position: relative;
-        z-index: 2;
-        background: white;
+#services,
+#about,
+#reviews,
+#gallery,
+#contact {
+    position: relative;
+    z-index: 2;
+    background: white;
 }
 
 .hero-overlay {
