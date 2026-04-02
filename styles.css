@@ -47,7 +47,7 @@ ul {
 }
 
 .container {
-    width: min(92%, 1200px);
+    width: min(96%, 1400px);
     margin: 0 auto;
 }
 
@@ -58,6 +58,7 @@ ul {
     cursor: pointer;
     padding: 0.5rem;
     z-index: 1100;
+    justify-self: start;
 }
 
 .menu-toggle span {
@@ -87,18 +88,19 @@ ul {
 }
 
 .herologo img {
-    height: 100px;
+    height: 110px;
     width: auto;
     display: block;
 }
 
 .herologo {
     justify-self: start;
+    margin-right: 1rem;
 }
 
 .header-inner {
     display: grid;
-    grid-template-columns: auto 1fr auto;
+    grid-template-columns: auto auto 1fr auto;
     align-items: center;
     gap: 2rem;
 }
@@ -142,7 +144,7 @@ ul {
 }
 
 .main-nav {
-    justify-self: center;
+    justify-self: start;
 }
 
 .nav-link {
@@ -164,6 +166,8 @@ ul {
 
 .header-cta {
     justify-self: end;
+    display: flex;
+    gap: 0.75rem;
 }
 
 .btn {
@@ -296,6 +300,8 @@ ul {
     gap: 2rem;
     margin: 0 auto;
     max-width: 900px;
+    position: relative;
+    z-index: 1;
 } 
 
 /* ICON STYLE */
@@ -309,10 +315,10 @@ ul {
 .highlight-card {
     min-height: 320px;
     padding: 2rem;
-    border: 2px solid rgba(0, 0, 0, 0.15);
+    border: 2px solid rgba(0, 0, 0, 0.28);
     border-radius: 12px;
     color: #111;
-    background: rgba(255, 255, 255, 0.86);
+    background: rgba(255, 255, 255, 0.72);
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
     backdrop-filter: blur(6px);
@@ -363,6 +369,12 @@ ul {
     border-radius: 16px;
     margin-top: 2rem;
 }
+
+.highlight-background::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.18);
 
 
 .specialty-card {
@@ -550,6 +562,16 @@ ul {
         margin-top: 1rem;
     }
 
+    .herologo,
+    .menu-toggle,
+    .main-nav {
+        justify-self: start;
+    }
+
+    .herologo img {
+        height: 84px;
+    }
+
     .header-cta {
         display: none;
     }
@@ -561,7 +583,7 @@ ul {
     .header-inner {
         grid-template-columns: 1fr;
         gap: 1rem;
-        justify-items: center;
+        justify-items: stretch;
     }
 
     .hero-big {
