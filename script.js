@@ -8,6 +8,11 @@ document.querySelectorAll('a[href^="#"]').forEach(link => {
     });
 });
 
+const nav = document.querySelector(".main-nav");
+const header = document.querySelector(".site-header");
+const form = document.querySelector(".quote-form");
+const slides = document.querySelectorAll(".slide");
+
 
 const nav = document.querySelector(".main-nav");
 const header = document.querySelector(".site-header");
@@ -17,7 +22,12 @@ function toggleNav() {
     header.classList.toggle("nav-active");
 }
 
-const form = document.querySelector(".quote-form");
+document.querySelectorAll(".nav-link").forEach(link => {
+    link.addEventListener("click", () => {
+        nav.classList.remove("nav-open");
+        header.classList.remove("nav-active");
+    });
+});
 
 if (form) {
     form.addEventListener("submit", e => {
@@ -67,11 +77,21 @@ function showFormMessage(message, type) {
     }, 3000);
 }
 
+function showNextSlide() {
+    if (slides.length === 0) return;
+    slides[index].classList.remove("active");
+    index = (index + 1) % slides.length;
+    slides[index].classList.add("active");
+}
+
+if (slides.length > 0) {
+    setInterval(showNextSlide, 4000);
+}
+
 const revealElements = document.querySelectorAll(
     ".highlight-card, .specialty-card, .section-header, .footer-inner"
 );
 
-const img = "assets/scraper.jpeg"; 
 
 const slides = document.querySelectorAll('.slide');
 let index = 0;
@@ -83,7 +103,7 @@ function showNextSlide() {
 }
 
 window.addEventListener("scroll", () => {
-    const header = document.querySelector(.site-header");
+    const header = document.querySelector(".site-header");
 
     if (window.scrollY > 50) {
         header.classList.add("scrolled");
