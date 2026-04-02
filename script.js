@@ -13,10 +13,6 @@ const header = document.querySelector(".site-header");
 const form = document.querySelector(".quote-form");
 const slides = document.querySelectorAll(".slide");
 
-
-const nav = document.querySelector(".main-nav");
-const header = document.querySelector(".site-header");
-
 function toggleNav() {
     nav.classList.toggle("nav-open");
     header.classList.toggle("nav-active");
@@ -92,8 +88,6 @@ const revealElements = document.querySelectorAll(
     ".highlight-card, .specialty-card, .section-header, .footer-inner"
 );
 
-
-const slides = document.querySelectorAll('.slide');
 let index = 0;
 
 function showNextSlide() {
