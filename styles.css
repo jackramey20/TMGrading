@@ -55,7 +55,7 @@ ul {
     display: none;
     background: transparent;
     border: none;
-    cursor: ponter;
+    cursor: pointer;
     padding: 0.5rem;
     z-index: 1100;
 }
@@ -65,9 +65,9 @@ ul {
     width: 26px;
     height: 3px;
     background: white;
-    marin: 5px 0;
+    margin: 5px 0;
     border-radius: 2px;
-    transition: 0.3s ease
+    transition: 0.3s ease;
 }
 
 .site-header {
@@ -126,8 +126,8 @@ ul {
     z-index: 2;
 }
 
-.logo-section. section-header h2,
-.logo-section. section-header,
+.logo-section .section-header h2,
+.logo-section .section-header,
 .logo-section h3 {
     color: #fff;
 }
@@ -365,14 +365,14 @@ ul {
 
 .highlight-background {
     background: url("assets/graders.jpeg") center/cover no-repeat;
-    padding: 2.5 rem;
+    padding: 2.5rem;
     border-radius: 16px;
     margin-top: 2rem;
 }
 
 
 .specialty-card {
-    border: 2px solid rgba(255, 255, 255, 035);
+    border: 2px solid rgba(255, 255, 255, 0.35);
     padding: 2rem;
     background: rgba(255,255,255,0.08);
     backdrop-filter: blur(4px);/* glass effect */
@@ -540,7 +540,7 @@ ul {
 
 @media (max-width: 768px) {
 
-    menu-toggle {
+    .menu-toggle {
         display: block;
     }
 
@@ -573,8 +573,8 @@ ul {
     
     .header-inner {
         grid-template-columns: 1fr;
-        flex-direction: column;
         gap: 1rem;
+        justify-items: center;
     }
 
     .main-nav .nav-list {
