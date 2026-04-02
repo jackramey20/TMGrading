@@ -250,18 +250,18 @@ ul {
 
 .highlight-card {
     padding: 2rem;
-    mine-height: 320px;
+    min-height: 320px;
     border: 2px solid rgba(0, 0, 0, 0.2);
     border-radius: 12px;
     color: #111;
     background: rgba(255, 255, 255, 0.72);
     text-align: center;
-    transition: all 0.3s ease, box-shadow 0.3s ease, background 0.3s ease, opacity 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease, opacity 0.3s ease;
     transform: translateY(0);
     opacity: 0.95;
     backdrop-filter: blur(6px);
     box-shadow: 0 10px 25px rgba(0,0,0,0.08);
-    display: felx;
+    display: flex;
     align-items: center;
     justify-content: center;
 }
@@ -271,12 +271,13 @@ ul {
     transform-origin: center;
     transition: transform 0.3s ease;
     width: 100%;
+}
 
 .highlight-card:hover {
     background: #fff;
     transform: translateY(-6px);
     opacity: 1;
-    box-shadow: 0 14pc 30px rgba(0,0,0,0.16);
+    box-shadow: 0 14px 30px rgba(0,0,0,0.16);
 }
 
 .highlight-card:hover .highlight-card-inner {
@@ -319,7 +320,7 @@ ul {
     backdrop-filter: blur(2px);/* glass effect */
     border-radius: 8px; 
     color: #111;
-    transition: 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
 } 
 
 .specialty-card:hover {
