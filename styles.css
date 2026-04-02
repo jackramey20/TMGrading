@@ -234,9 +234,10 @@ ul {
 /* GRID LAYOUT */
 .hero-highlights {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 1.5rem;
-    margin-top: 3rem;
+    grid-template-columns: repeat(2, minmax(260px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem auto 0;
+    max-width: 760px;
 } 
 
 /* ICON STYLE */
@@ -249,42 +250,57 @@ ul {
 
 .highlight-card {
     padding: 2rem;
+    mine-height: 320px;
     border: 2px solid rgba(0, 0, 0, 0.2);
-    border-radius: 10px;
+    border-radius: 12px;
     color: #111;
     background: rgba(255, 255, 255, 0.72);
     text-align: center;
-    transition: all 0.3s ease;
-    transform: scale(0.96);
-    opacity: 0.92;
+    transition: all 0.3s ease, box-shadow 0.3s ease, background 0.3s ease, opacity 0.3s ease;
+    transform: translateY(0);
+    opacity: 0.95;
     backdrop-filter: blur(6px);
     box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    display: felx;
+    align-items: center;
+    justify-content: center;
 }
+
+.highlight-card-inner {
+    transform: scale(0.94);
+    transform-origin: center;
+    transition: transform 0.3s ease;
+    width: 100%;
 
 .highlight-card:hover {
     background: #fff;
-    transform: scale(1);
+    transform: translateY(-6px);
     opacity: 1;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.16);
+    box-shadow: 0 14pc 30px rgba(0,0,0,0.16);
+}
+
+.highlight-card:hover .highlight-card-inner {
+    transform: scale(1);
 }
 
 .highlight-card:hover .highlight-icon {
-    transform: scale(1.2);
+    transform: scale(1.12);
 }
 
 .highlight-card h3 {
-    font-size: 1.1rem;
-    transition: all 0.3s ease;
-    margin-bottom: 0.75rem;
+    font-size: 1.2rem;
+    margin-bottom: 0.85rem;
     color: #111;
+    line-height: 1.2;
 }
 
 .highlight-card p {
-    font-size: 0.9rem;
-    opacity: 0.82;
+    font-size: 0.98rem;
+    opacity: 0.86;
     transition: all 0.3s ease;
-    line-height: 1.7;
+    line-height: 1.75;
     color: #333;
+    margin: 0;
 }
 
 .highlight-card:hover h3 {
@@ -447,5 +463,14 @@ ul {
     .hero,
     .logo-section {
         background-attachment: scroll;
+    }
+
+    .hero-highlights {
+        grid-template-columns: 1fr;
+        max-width: 420px;
+    }
+
+    .highlight-card {
+        min-height: 280px;
     }
 }
