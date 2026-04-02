@@ -51,6 +51,25 @@ ul {
     margin: 0 auto;
 }
 
+.menu-toggle {
+    display: none;
+    background: transparent;
+    border: none;
+    cursor: ponter;
+    padding: 0.5rem;
+    z-index: 1100;
+}
+
+.menu-toggle span {
+    display: block;
+    width: 26px;
+    height: 3px;
+    background: white;
+    marin: 5px 0;
+    border-radius: 2px;
+    transition: 0.3s ease
+}
+
 .site-header {
     background: transparent;
     color: var(--color-light);
@@ -478,6 +497,38 @@ ul {
 }
 
 @media (max-width: 768px) {
+
+    menu-toggle {
+        display: block;
+    }
+
+    .main-nav {
+        display: none;
+        width: 100%;
+    }
+
+    .main-nav.nav-open {
+        display: block;
+    }
+
+    .main-nav .nav-list {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        padding: 1rem 0;
+        background: rgba(0, 0, 0, 0.92);
+        border-radius: 12px;
+        margin-top: 1rem;
+    }
+
+    .header-cta {
+        display: none;
+    }
+
+    .site-header.nav-active {
+        background: rgba(0, 0, 0, 0.95);
+    }
+    
     .header-inner {
         grid-template-columns: 1fr;
         flex-direction: column;
