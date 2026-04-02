@@ -370,7 +370,7 @@ ul {
     border-radius: 16px;
     margin-top: 2rem;
     width: 100vw;
-    margin-left: calc:(50% - 50vw);
+    margin-left: calc(50% - 50vw);
     margin-right: calc(50% - 50vw);
     position: relative;
     overflow: hidden;
@@ -381,7 +381,7 @@ ul {
     position: absolute;
     inset: 0;
     background: rgba(0, 0, 0, 0.11);
-
+}
 
 .specialty-card {
     border: 2px solid rgba(255, 255, 255, 0.35);
