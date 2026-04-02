@@ -4,7 +4,7 @@ document.querySelectorAll('a[href^="#"]').forEach(link => {
         if (!target) return;
 
         e.preventDefault();
-        target.scrollIntoView({ behavior: "smooth", block: "start"});
+        target.scrollIntoView({ behavior: "smooth", block: "start" });
     });
 });
 
@@ -12,6 +12,9 @@ const nav = document.querySelector(".main-nav");
 const header = document.querySelector(".site-header");
 const form = document.querySelector(".quote-form");
 const slides = document.querySelectorAll(".slide");
+const revealElements = document.querySelectorAll(
+    ".highlight-card, .specialty-card, .section-header, .footer-inner"
+);
 
 function toggleNav() {
     nav.classList.toggle("nav-open");
@@ -23,25 +26,6 @@ document.querySelectorAll(".nav-link").forEach(link => {
         nav.classList.remove("nav-open");
         header.classList.remove("nav-active");
     });
-});
-
-let index = 0;
-
-function showNextSlide() {
-    if (slide.length === 0) return;
-    slides[index].classList.remove("active");
-    index = (index + 1) % slides.length;
-    slides[index].classList.add("active");
-}
-
-if (slides.length > 0) {
-    setInterval(showNextSlide, 4000);
-}
-
-window.addEventListener("scroll", () => {
-    if (window.scroll > 50) {
-        header.classList.add("scrolled");
-    }
 });
 
 if (form) {
@@ -67,9 +51,8 @@ if (form) {
             showFormMessage("Please fill out all required fields.", "error");
             return;
         }
-// simulate sucess since backend isnt connected yet
-        showFormMessage("Your request has been submitted! We'll contact you soon", "success");
 
+        showFormMessage("Your request has been submitted! We'll contact you soon", "success");
         form.reset();
     });
 }
@@ -92,12 +75,26 @@ function showFormMessage(message, type) {
     }, 3000);
 }
 
+let index = 0;
 
-const revealElements = document.querySelectorAll(
-    ".highlight-card, .specialty-card, .section-header, .footer-inner"
-);
+function showNextSlide() {
+    if (slides.length === 0) return;
+    slides[index].classList.remove("active");
+    index = (index + 1) % slides.length;
+    slides[index].classList.add("active");
+}
 
+if (slides.length > 0) {
+    setInterval(showNextSlide, 4000);
+}
 
+window.addEventListener("scroll", () => {
+    if (window.scrollY > 50) {
+        header.classList.add("scrolled");
+    } else {
+        header.classList.remove("scrolled");
+    }
+});
 
 const observer = new IntersectionObserver(
     entries => {
