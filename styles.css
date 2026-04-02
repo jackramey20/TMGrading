@@ -315,10 +315,10 @@ ul {
 .highlight-card {
     min-height: 320px;
     padding: 2rem;
-    border: 2px solid rgba(0, 0, 0, 0.28);
+    border: 2px solid rgba(0, 0, 0, 0.3);
     border-radius: 12px;
     color: #111;
-    background: rgba(255, 255, 255, 0.72);
+    background: rgba(255, 255, 255, 0.68);
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
     backdrop-filter: blur(6px);
@@ -365,16 +365,22 @@ ul {
 
 .highlight-background {
     background: url("assets/graders.jpeg") center/cover no-repeat;
-    padding: 2.5rem;
+    background-attachment: fixed;
+    padding: 3rem 2rem;
     border-radius: 16px;
     margin-top: 2rem;
+    width: 100vw;
+    margin-left: calc:(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+    position: relative;
+    overflow: hidden;
 }
 
 .highlight-background::before {
     content: "";
     position: absolute;
     inset: 0;
-    background: rgba(0, 0, 0, 0.18);
+    background: rgba(0, 0, 0, 0.11);
 
 
 .specialty-card {
