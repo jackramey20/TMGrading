@@ -136,12 +136,6 @@ ul {
     color: rgba(255,255,255,0.88);
 }
 
-.logo-overlay {
-    position: absolute;
-    inset: 0;
-    background: rgba(255, 255, 255, 0.0);
-}
-
 .main-nav .nav-list {
     display: flex;
     gap: 1.5rem;
@@ -475,13 +469,6 @@ ul {
     flex-direction: column;
 }
 
-.quote-form input,
-.quote-form textarea {
-    padding: 0.7rem;
-    border: 1px solid #ccc;
-    border-radius: var(--radius);
-}
-
 .site-footer {
     background: var(--color-dark);
     color: var(--color-light);
@@ -577,13 +564,8 @@ ul {
         justify-items: center;
     }
 
-    .main-nav .nav-list {
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    .hero-title {
-        font-size: 2.4rem;
+    .hero-big {
+        font-size: 3rem;
     }
 
     .quote-layout {
