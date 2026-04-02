@@ -252,13 +252,11 @@ ul {
     border: 2px solid rgba(0, 0, 0, 0.2);
     border-radius: 10px;
     background: rgba(255, 255, 255, 0.07);
-    color: white;
     text-align: center;
     transition: all 0.3s ease;
     transform: scale(0.95);
     opacity: 0.85;
     backdrop-filter: blur(6px);
-    z-index: 1;
 }
 
 .highlight-card:hover {
