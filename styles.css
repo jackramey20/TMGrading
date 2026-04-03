@@ -626,12 +626,14 @@ ul {
         background-attachment: scroll;
     }
 
-    .hero-highlights {
+    .hero-highlights,
+    .specialties-grid {
         grid-template-columns: 1fr;
         max-width: 420px;
     }
 
-    .highlight-card {
+    .highlight-card,
+    .specialty-card {
         min-height: 280px;
     }
 }
