@@ -450,6 +450,22 @@ ul {
     max-width: 1000px;
 }
 
+.video-wrapper iframe {
+    width: 100%;
+    display: block;
+    min-height: 500px;
+    border: 0;
+    border-radius: 12px;
+}
+
+.video-wrapper {
+    margin-top: 2rem;
+    background: #000;
+    padding: 1rem;
+    border-radius: 16px;
+    overflow: hidden;
+}
+
 .quote-layout {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -475,15 +491,6 @@ ul {
 
 .quote-form button {
     margin-top: 0.5rem;
-}
-
-.video-wrapper {
-    margin-top: 2rem;
-    background: #000;
-    padding: 2rem;
-    border-radius: var(--radius);
-    text-align: center;
-    color: var(--color-light);
 }
 
 .bottom-logo {
