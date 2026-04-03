@@ -442,7 +442,7 @@ ul {
     transform: translateY(-6px);
 }
 
-.specialty-card:hover h3.
+.specialty-card:hover h3,
 .specialty-card:hover p {
     color: #111;
 }
