@@ -1,3 +1,10 @@
+/* =========================================================
+   1) ROOT VARIABLES / GLOBAL SETTINGS
+   ---------------------------------------------------------
+   Reusable colors, spacing, shadows, transitions, fonts.
+   Change these first if you want site-wide visual updates.
+   ========================================================= */
+
 :root {
     --color-primary: #980c05;
     --color-dark: #111;
@@ -14,9 +21,13 @@
     --font-main: 'Segoe UI', Arial, sans-serif;
 }
 
-h1, h2, h3 {
-    font-family: 'Oswald', sans-serif;
-}
+
+/* =========================================================
+   2) GLOBAL RESET / BASE TYPOGRAPHY
+   ---------------------------------------------------------
+   Removes default browser spacing and sets base styles for
+   the whole page.
+   ========================================================= */
 
 * {
     margin: 0;
@@ -29,6 +40,12 @@ body {
     color: var(--color-text);
     background: var(--color-light);
     line-height: 1.6;
+} 
+
+h1,
+h2,
+h3 {
+    font-family: 'Oswald', sans-serif;
 }
 
 img {
@@ -46,136 +63,39 @@ ul {
     list-style: none;
 }
 
+
+/* =========================================================
+   3) REUSABLE LAYOUT HELPERS
+   ---------------------------------------------------------
+   Common container and shared section spacing.
+   ========================================================= */
+
 .container {
     width: min(96%, 1400px);
     margin: 0 auto;
 }
 
-.menu-toggle {
-    display: none;
-    background: transparent;
-    border: none;
-    cursor: pointer;
-    padding: 0.5rem;
-    z-index: 1100;
-    justify-self: start;
+.section {
+    padding: 6rem 0;
 }
 
-.menu-toggle span {
-    display: block;
-    width: 26px;
-    height: 3px;
-    background: white;
-    margin: 5px 0;
-    border-radius: 2px;
-    transition: 0.3s ease;
+.section-header {
+    color: #777;
+    letter-spacing: 2px;
+    font-size: 0.9rem;
 }
 
-.site-header {
-    background: transparent;
-    color: var(--color-light);
-    padding: 1rem 2rem;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 1000;
-    width: 100%;
+.section-header h2 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
 }
 
-.site-header.scrolled {
-    background: rgba(0, 0, 0, 0.9);
-    transition: 0.3s ease;
-}
 
-.site-header .container {
-    width: 100%;
-    max-width: none;
-    margin: 0;
-    padding: 0;
-}
-
-.herologo img {
-    height: 110px;
-    width: auto;
-    display: block;
-}
-
-.herologo {
-    justify-self: start;
-    margin-right: 1rem;
-}
-
-.header-inner {
-    display: grid;
-    grid-template-columns: auto auto 1fr auto;
-    align-items: center;
-    gap: 2rem;
-}
-
-.logo-section {  /* For the logo image in specialties */
-    position: relative;
-    background: url("assets/truck.jpeg") center/cover no-repeat;
-    background-attachment: fixed;
-    display: flex;
-    background-color: #111;
-    padding: 7rem 0;
-    z-index: 2;
-}
-
-.logo-section::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: rgba(10, 10, 10, 0.72);
-    z-index: 1;
-}
-
-.logo-section .container {
-    position: relative;
-    z-index: 2;
-}
-
-.logo-section .section-header h2,
-.logo-section .section-header,
-.logo-section h3 {
-    color: #fff;
-}
-
-.logo-section p {
-    color: rgba(255,255,255,0.88);
-}
-
-.main-nav .nav-list {
-    display: flex;
-    gap: 1.5rem;
-}
-
-.main-nav {
-    justify-self: start;
-}
-
-.nav-link {
-    color: white;
-    font-weight: 500;
-    transition: var(--transition);
-}
-
-.nav-link:hover {
-    color: var(--color-primary);
-}
-
-.header-cta .btn {
-    padding: 0.5rem 1rem;
-    font-size: 0.85rem;
-    border-radius: 4px;
-    line-height: 1.2;
-}
-
-.header-cta {
-    justify-self: end;
-    display: flex;
-    gap: 0.75rem;
-}
+/* =========================================================
+   4) REUSABLE BUTTONS
+   ---------------------------------------------------------
+   Base button styles + primary/orange and outline versions.
+   ========================================================= */
 
 .btn {
     padding: 0.7rem 1.4rem;
@@ -207,6 +127,127 @@ ul {
     color: white;
 }
 
+
+/* =========================================================
+   5) SITE HEADER / TOP NAVIGATION
+   ---------------------------------------------------------
+   This controls the fixed-looking top row:
+   - logo
+   - nav links
+   - CTA buttons
+   Also includes the mobile hamburger button.
+   ========================================================= */
+
+.site-header {
+    background: transparent;
+    color: var(--color-light);
+    padding: 1rem 2rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    width: 100%;
+}
+
+/* Dark background added by JS once user scrolls */
+.site-header.scrolled {
+    background: rgba(0, 0, 0, 0.9);
+    transition: 0.3s ease;
+}
+
+/* Override normal page container so header can stretch wide */
+.site-header .container {
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* Grid layout for logo, menu button/nav, and CTA buttons */
+.header-inner {
+    display: grid;
+    grid-template-columns: auto auto 1fr auto;
+    align-items: center;
+    gap: 2rem;
+}
+
+/* Logo image sizing and placement */
+.herologo {
+    justify-self: start;
+    margin-right: 1rem;
+}
+
+.herologo img {
+    height: 110px;
+    width: auto;
+    display: block;
+}
+
+/* Mobile hamburger button */
+.menu-toggle {
+    display: none;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    z-index: 1100;
+    justify-self: start;
+}
+
+.menu-toggle span {
+    display: block;
+    width: 26px;
+    height: 3px;
+    background: white;
+    margin: 5px 0;
+    border-radius: 2px;
+    transition: 0.3s ease;
+}
+
+/* Navigation layout */
+.main-nav {
+    justify-self: start;
+}
+
+.main-nav .nav-list {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.nav-link {
+    color: white;
+    font-weight: 500;
+    transition: var(--transition);
+}
+
+.nav-link:hover {
+    color: var(--color-primary);
+}
+
+/* Right-side header CTA buttons */
+.header-cta {
+    justify-self: end;
+    display: flex;
+    gap: 0.75rem;
+}
+
+.header-cta .btn {
+    padding: 0.5rem 1rem;
+    font-size: 0.85rem;
+    border-radius: 4px;
+    line-height: 1.2;
+}
+
+
+/* =========================================================
+   6) HERO SECTION
+   ---------------------------------------------------------
+   Fullscreen opening section with:
+   - background slideshow
+   - dark overlay
+   - centered text/button content
+   ========================================================= */
+
 .hero {
     position: relative;
     min-height: 100vh;
@@ -218,19 +259,22 @@ ul {
     z-index: 1;
 }
 
+/* Dark overlay on top of slideshow for text readability */
 .hero-overlay {
     position: absolute;
     inset: 0;
-    background: rgba(0,0,0,0.45);
+    background: rgba(0, 0, 0, 0.45);
     z-index: 1;
 }
 
+/* Slideshow wrapper sits behind the overlay/content */
 .hero-slideshow {
     position: absolute;
     inset: 0;
     z-index: 0;
 }
 
+/* Each background slide */
 .slide {
     position: absolute;
     inset: 0;
@@ -242,11 +286,13 @@ ul {
     transition: opacity 1.2s ease-in-out;
 }
 
+/* The active slide is visible */
 .slide.active {
     opacity: 1;
-    transform: scale(1); /* originally 1 */
+    transform: scale(1);
 }
 
+/* Centered hero text/content */
 .hero-center {
     position: relative;
     text-align: center;
@@ -254,6 +300,7 @@ ul {
     z-index: 2;
 }
 
+/* Main orange hero headline */
 .hero-big {
     font-size: 5rem;
     font-weight: 900;
@@ -263,6 +310,7 @@ ul {
     font-family: 'Oswald', sans-serif;
 }
 
+/* Small supporting hero text */
 .hero-small {
     font-size: 0.9rem;
     letter-spacing: 2px;
@@ -270,6 +318,7 @@ ul {
     opacity: 0.8;
 }
 
+/* Hero CTA button */
 .hero-btn {
     margin-top: 20px;
     background: #ff5a00;
@@ -281,6 +330,14 @@ ul {
     background: #e14d00;
 }
 
+
+/* =========================================================
+   7) "WHY US" / 25 YEARS OF EXCELLENCE SECTION
+   ---------------------------------------------------------
+   White content panel under the hero that introduces the
+   company before the highlight cards begin.
+   ========================================================= */
+
 .section-why {
     background: #f5f5f5;
     padding: 0;
@@ -291,23 +348,27 @@ ul {
     margin: 0 auto;
 }
 
+/* White content card / panel */
 .why-intro {
     max-width: 900px;
     min-height: 320px;
     padding: 4rem 3rem;
     margin: 0 auto 2.5rem;
     text-align: left;
+
     display: flex;
     flex-direction: column;
     justify-content: center;
+
     background: rgba(255, 255, 255, 0.96);
     border-left: 6px solid #ff5a00;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
     border-radius: 18px;
     position: relative;
     z-index: 2;
 }
 
+/* Orange accent line above the section heading */
 .why-intro .section-header {
     position: relative;
     margin-bottom: 1.25rem;
@@ -323,12 +384,48 @@ ul {
     border-radius: 999px;
 }
 
-
 .section-body p {
     margin-bottom: 1.25rem;
 }
 
-/* GRID LAYOUT */
+
+/* =========================================================
+   8) HIGHLIGHT CARDS BACKGROUND BAND
+   ---------------------------------------------------------
+   Full-width background image band that sits behind the
+   four highlight cards.
+   ========================================================= */
+
+.highlight-background {
+    background: url("assets/graders.jpeg") center/cover no-repeat;
+    background-attachment: fixed;
+    padding: 3rem 2rem;
+    border-radius: 16px;
+    margin-top: 2rem;
+
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+
+    position: relative;
+    overflow: hidden;
+}
+
+/* Slight dark layer over the image so cards read better */
+.highlight-background::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.11);
+}
+
+
+/* =========================================================
+   9) HIGHLIGHT CARDS GRID
+   ---------------------------------------------------------
+   2x2 glass-style cards used under the "Why Us" intro.
+   ========================================================= */
+
 .hero-highlights {
     display: grid;
     grid-template-columns: repeat(2, minmax(280px, 1fr));
@@ -337,14 +434,6 @@ ul {
     max-width: 900px;
     position: relative;
     z-index: 1;
-} 
-
-/* ICON STYLE */
-.highlight-icon {
-    font-size: 2.5rem;
-    color: #ff5a00;
-    margin-bottom: 1rem;
-    transition: transform 0.3s ease;
 }
 
 .highlight-card {
@@ -355,14 +444,17 @@ ul {
     color: #111;
     background: rgba(255, 255, 255, 0.68);
     text-align: center;
+
     transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
     backdrop-filter: blur(6px);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
+/* Inner wrapper lets text/icon scale smoothly on hover */
 .highlight-card-inner {
     transform: scale(0.94);
     transform-origin: center;
@@ -373,7 +465,7 @@ ul {
 .highlight-card:hover {
     background: #fff;
     transform: translateY(-6px);
-    box-shadow: 0 14px 30px rgba(0,0,0,0.16);
+    box-shadow: 0 14px 30px rgba(0, 0, 0, 0.16);
 }
 
 .highlight-card:hover .highlight-card-inner {
@@ -384,6 +476,15 @@ ul {
     transform: scale(1.12);
 }
 
+/* Icon styling */
+.highlight-icon {
+    font-size: 2.5rem;
+    color: #ff5a00;
+    margin-bottom: 1rem;
+    transition: transform 0.3s ease;
+}
+
+/* Card text */
 .highlight-card h3 {
     font-size: 1.2rem;
     margin-bottom: 0.85rem;
@@ -398,74 +499,46 @@ ul {
     margin: 0;
 }
 
-.highlight-background {
-    background: url("assets/graders.jpeg") center/cover no-repeat;
-    background-attachment: fixed;
-    padding: 3rem 2rem;
-    border-radius: 16px;
-    margin-top: 2rem;
-    width: 100vw;
-    margin-left: calc(50% - 50vw);
-    margin-right: calc(50% - 50vw);
+
+/* =========================================================
+   10) SPECIALTIES SECTION
+   ---------------------------------------------------------
+   Full-width background image section with dark overlay and
+   specialty cards laid out in a 2x2 grid.
+   ========================================================= */
+
+.logo-section {
     position: relative;
-    overflow: hidden;
+    background: url("assets/truck.jpeg") center/cover no-repeat;
+    background-attachment: fixed;
+    display: flex;
+    background-color: #111;
+    padding: 7rem 0;
+    z-index: 2;
 }
 
-.highlight-background::before {
+/* Dark overlay to improve text readability on image */
+.logo-section::before {
     content: "";
     position: absolute;
     inset: 0;
-    background: rgba(0, 0, 0, 0.11);
+    background: rgba(10, 10, 10, 0.72);
+    z-index: 1;
 }
 
-.specialty-card {
-    min-height: 300px;
-    padding: 2rem;
-    border: 2px solid rgba(255, 255, 255, 0.3);
-    background: rgba(255, 255, 255, 0.12);
-    backdrop-filter: blur(6px);
-    border-radius: 18px;
+/* Content sits above the overlay */
+.logo-section .container {
+    position: relative;
+    z-index: 2;
+}
+
+/* White section text on dark background */
+.logo-section .section-header h2,
+.logo-section .section-header {
     color: #fff;
-    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: left;
 }
 
-.specialty-card:hover {
-    background: rgba(255, 255, 255, 0.95);
-    color: #111;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.16);
-    transform: translateY(-6px);
-}
-
-.specialty-card:hover h3,
-.specialty-card:hover p {
-    color: #111;
-}
-
-.specialty-card-inner {
-    width: 100%;
-}
-
-.section {
-    padding: 6rem 0;
-}
-
-.section-header {
-    color: #777;
-    letter-spacing: 2px;
-    font-size: 0.9rem;
-}
-
-.section-header h2 {
-    font-size: 2rem;
-    margin-bottom: 0.5rem;
-}
-
+/* 2x2 grid of specialties cards */
 .specialties-grid {
     display: grid;
     grid-template-columns: repeat(2, minmax(280px, 1fr));
@@ -474,12 +547,68 @@ ul {
     margin: 2rem auto 0;
 }
 
-.section:nth-child(even) {
-    background: #f8f8f8;
+/* Specialty card base style */
+.specialty-card {
+    min-height: 300px;
+    padding: 2rem;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    background: rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(6px);
+    border-radius: 18px;
+    color: #fff;
+
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
 }
 
-.section-quote .container {
-    max-width: 1000px;
+/* Inner wrapper for card text */
+.specialty-card-inner {
+    width: 100%;
+}
+
+/* Specialty text defaults on dark background */
+.specialty-card h3 {
+    color: #fff;
+    margin-bottom: 1rem;
+}
+
+.specialty-card p {
+    color: rgba(255, 255, 255, 0.88);
+    line-height: 1.7;
+}
+
+/* Specialty hover state */
+.specialty-card:hover {
+    background: rgba(255, 255, 255, 0.95);
+    color: #111;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.16);
+    transform: translateY(-6px);
+}
+
+/* Force text dark on hover so it remains readable */
+.specialty-card:hover h3,
+.specialty-card:hover p {
+    color: #111;
+}
+
+
+/* =========================================================
+   11) VIDEO SECTION
+   ---------------------------------------------------------
+   Wrapper for embedded YouTube/video content.
+   ========================================================= */
+
+.video-wrapper {
+    margin-top: 2rem;
+    background: #000;
+    padding: 1rem;
+    border-radius: 16px;
+    overflow: hidden;
 }
 
 .video-wrapper iframe {
@@ -490,12 +619,15 @@ ul {
     border-radius: 12px;
 }
 
-.video-wrapper {
-    margin-top: 2rem;
-    background: #000;
-    padding: 1rem;
-    border-radius: 16px;
-    overflow: hidden;
+
+/* =========================================================
+   12) QUOTE / CONTACT SECTION
+   ---------------------------------------------------------
+   Two-column contact + form area with logo underneath.
+   ========================================================= */
+
+.section-quote .container {
+    max-width: 1000px;
 }
 
 .quote-layout {
@@ -505,12 +637,22 @@ ul {
     background: #fff;
     padding: 2rem;
     border-radius: 14px;
-    box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
 }
 
 .quote-contact,
 .quote-form {
     background: #fff;
+}
+
+.quote-contact ul {
+    margin-bottom: 1rem;
+}
+
+.quote-form .form-row {
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
 }
 
 .quote-form input,
@@ -525,6 +667,7 @@ ul {
     margin-top: 0.5rem;
 }
 
+/* Logo placed below the quote form section */
 .bottom-logo {
     margin-top: 2.5rem;
     text-align: center;
@@ -537,15 +680,12 @@ ul {
     opacity: 0.95;
 }
 
-.quote-contact ul {
-    margin-bottom: 1rem;
-}
 
-.quote-form .form-row {
-    margin-bottom: 1rem;
-    display: flex;
-    flex-direction: column;
-}
+/* =========================================================
+   13) FOOTER
+   ---------------------------------------------------------
+   Footer layout and bottom copyright strip.
+   ========================================================= */
 
 .site-footer {
     background: var(--color-dark);
@@ -566,11 +706,19 @@ ul {
     text-align: center;
 }
 
+
+/* =========================================================
+   14) JS-DRIVEN STATE CLASSES
+   ---------------------------------------------------------
+   Used by JavaScript for reveal animations and form states.
+   ========================================================= */
+
 .reveal {
     opacity: 1;
     transform: translateY(0);
 }
 
+/* Current setup keeps these visible by default */
 .section-header,
 .footer-inner {
     opacity: 1;
@@ -603,13 +751,26 @@ ul {
     border-color: red !important;
 }
 
+
+/* =========================================================
+   15) RESPONSIVE / MOBILE STYLES
+   ---------------------------------------------------------
+   Adjusts layout for tablets and phones:
+   - hamburger appears
+   - nav becomes dropdown
+   - CTA buttons hide
+   - cards stack into one column
+   ========================================================= */
+
 @media (max-width: 768px) {
 
+    /* Show hamburger on mobile */
     .menu-toggle {
         display: block;
         justify-self: end;
     }
 
+    /* Nav becomes hidden until toggled open by JS */
     .main-nav {
         display: none;
         width: 100%;
@@ -620,6 +781,7 @@ ul {
         display: block;
     }
 
+    /* Mobile nav dropdown styling */
     .main-nav .nav-list {
         flex-direction: column;
         align-items: center;
@@ -630,6 +792,7 @@ ul {
         margin-top: 1rem;
     }
 
+    /* Mobile header alignment */
     .herologo,
     .menu-toggle,
     .main-nav {
@@ -651,7 +814,7 @@ ul {
     .site-header.nav-active {
         background: rgba(0, 0, 0, 0.95);
     }
-    
+
     .header-inner {
         grid-template-columns: auto auto;
         gap: 1rem;
@@ -659,19 +822,23 @@ ul {
         align-items: center;
     }
 
+    /* Scale hero text down for smaller screens */
     .hero-big {
         font-size: 3rem;
     }
 
+    /* Quote section becomes one column */
     .quote-layout {
         grid-template-columns: 1fr;
     }
 
+    /* Fixed backgrounds can behave badly on phones */
     .hero,
     .logo-section {
         background-attachment: scroll;
     }
 
+    /* Stack cards into one column on mobile */
     .hero-highlights,
     .specialties-grid {
         grid-template-columns: 1fr;
@@ -681,9 +848,5 @@ ul {
     .highlight-card,
     .specialty-card {
         min-height: 280px;
-    }
-
-    .herologo img {
-        height: 84px;
     }
 }
