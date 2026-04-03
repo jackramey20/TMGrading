@@ -74,7 +74,7 @@ ul {
 .site-header {
     background: transparent;
     color: var(--color-light);
-    padding: 1rem 0;
+    padding: 1rem 2rem;
     position: absolute;
     top: 0;
     left: 0;
@@ -85,6 +85,13 @@ ul {
 .site-header.scrolled {
     background: rgba(0, 0, 0, 0.9);
     transition: 0.3s ease;
+}
+
+.site-header .container {
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    padding: 0;
 }
 
 .herologo img {
@@ -575,11 +582,13 @@ ul {
 
     .menu-toggle {
         display: block;
+        justify-self: end;
     }
 
     .main-nav {
         display: none;
         width: 100%;
+        grid-column: 1 / -1;
     }
 
     .main-nav.nav-open {
@@ -610,14 +619,19 @@ ul {
         display: none;
     }
 
+    .site-header {
+        padding: 1rem;
+    }
+
     .site-header.nav-active {
         background: rgba(0, 0, 0, 0.95);
     }
     
     .header-inner {
-        grid-template-columns: 1fr;
+        grid-template-columns: auto auto;
         gap: 1rem;
-        justify-items: stretch;
+        justify-items: space-between;
+        align-items: center;
     }
 
     .hero-big {
@@ -642,5 +656,9 @@ ul {
     .highlight-card,
     .specialty-card {
         min-height: 280px;
+    }
+
+    .herologo img {
+        height: 84px;
     }
 }
