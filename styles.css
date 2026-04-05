@@ -435,6 +435,7 @@ ul {
    /* grid-template-columns: repeat(2, minmax(280px, 1fr));
    transform: translateY(-6px);
    box-shadow: 0 14px 30px rgba(0, 0, 0, 0.16); */
+}
 
    .gallery-item {
       position: relative;
