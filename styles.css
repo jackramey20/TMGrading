@@ -354,11 +354,12 @@ ul {
     min-height: 320px;
     padding: 4rem 3rem;
     margin: 0 auto 2.5rem;
-    text-align: left;
+    text-align: center;
 
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
 
     background: rgba(255, 255, 255, 0.96);
     border-left: 6px solid #ff5a00;
