@@ -377,6 +377,7 @@ ul {
     background: #ff5a00;
     margin-bottom: 1rem;
     border-radius: 999px;
+    justify-content: center;
 }
 
 .section-body p {
