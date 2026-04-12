@@ -361,12 +361,6 @@ ul {
     justify-content: center;
     align-items: center;
 
-    background: rgba(255, 255, 255, 0.96);
-    border-left: 6px solid #ff5a00;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
-    border-radius: 18px;
-    position: relative;
-    z-index: 2;
 }
 
 /* Orange accent line above the section heading */
