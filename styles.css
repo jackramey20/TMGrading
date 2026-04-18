@@ -349,7 +349,7 @@ ul {
 }
 
 /* White content card / panel */
-.why-intro {
+/* .why-intro {
     max-width: 900px;
     min-height: 320px;
     padding: 4rem 3rem;
@@ -368,7 +368,7 @@ ul {
     position: relative;
     z-index: 2;
 }
-
+ */
 /* Orange accent line above the section heading */
 .why-intro .section-header {
     position: relative;
