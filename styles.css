@@ -361,6 +361,12 @@ ul {
     justify-content: center;
     align-items: center;
 
+    background: rgba(255, 255, 255, 0.96);
+    border-left: 6px solid #ff5a00;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+    border-radius: 18px;
+    position: relative;
+    z-index: 2;
 }
 
 /* Orange accent line above the section heading */
@@ -372,12 +378,11 @@ ul {
 .why-intro .section-header::before {
     content: "";
     display: block;
-    width: 350px;
+    width: 56px;
     height: 4px;
     background: #ff5a00;
     margin-bottom: 1rem;
     border-radius: 999px;
-    justify-content: center;
 }
 
 .section-body p {
@@ -678,41 +683,48 @@ ul {
     max-width: 1000px;
 }
 
-.quote-layout {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2rem;
-    background: #fff;
-    padding: 2rem;
-    border-radius: 14px;
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+.contact-centered {
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 4rem 2rem;
 }
 
-.quote-contact,
-.quote-form {
-    background: #fff;
-}
-
-.quote-contact ul {
+.contact-centered h2 {
+    font-size: 2.5rem;
     margin-bottom: 1rem;
+    color: #111;
 }
 
-.quote-form .form-row {
-    margin-bottom: 1rem;
-    display: flex;
-    flex-direction: column;
+.contact-subtext {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    color: #555;
 }
 
-.quote-form input,
-.quote-form textarea {
-    width: 100%;
-    padding: 0.8rem 0.9rem;
-    border: 1px solid #d3d3d3;
-    border-radius: 8px;
+.contact-info {
+    font-size: 1.3rem;
+    line-height: 2;
+    margin-bottom: 2rem;
 }
 
-.quote-form button {
-    margin-top: 0.5rem;
+.contact-info p {
+    margin-bottom: 0.5rem;
+}
+
+.contact-btn {
+    font-size: 1.1rem;
+    padding: 0.9rem 1.8rem;
+}
+
+.contact-info strong {
+    color: #ff5a00;
+}
+
+.contact-centered {
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.08);
 }
 
 /* Logo placed below the quote form section */
