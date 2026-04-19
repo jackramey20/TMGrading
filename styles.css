@@ -745,6 +745,12 @@ ul {
     color: #ff5a00;
 }
 
+.contact-row {
+    display: block;
+    color: inherit;
+    text-decoration: none;
+}
+
 /* Logo placed below the quote form section */
 .bottom-logo {
     margin-top: 2.5rem;
