@@ -665,6 +665,20 @@ ul {
     color: #111;
 }
 
+.specialties {
+    position: relative;
+    padding: 80px 20px;
+
+    background:
+        linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)),
+        url("assets/asphalt.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    background-attachment: fixed;
+}
+
 
 /* =========================================================
    12) VIDEO SECTION
@@ -928,6 +942,10 @@ ul {
     .specialties-grid {
         grid-template-columns: 1fr;
         max-width: 420px;
+    }
+
+    .specialties {
+        background-attachment: scroll;
     }
 
     .highlight-card,
