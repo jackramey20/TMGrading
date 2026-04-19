@@ -478,7 +478,7 @@ ul {
    }
 
    .gallery-item:hover img {
-      transform: scale(1.5);
+      transform: scale(1.06);
    }
 
    .gallery-grid {
@@ -745,12 +745,6 @@ ul {
     color: #ff5a00;
 }
 
-.contact-centered {
-    background: #fff;
-    border-radius: 18px;
-    box-shadow: 0 12px 30px rgba(0,0,0,0.08);
-}
-
 /* Logo placed below the quote form section */
 .bottom-logo {
     margin-top: 2.5rem;
@@ -915,11 +909,6 @@ ul {
     /* Scale hero text down for smaller screens */
     .hero-big {
         font-size: 3rem;
-    }
-
-    /* Quote section becomes one column */
-    .quote-layout {
-        grid-template-columns: 1fr;
     }
 
     /* Fixed backgrounds can behave badly on phones */
